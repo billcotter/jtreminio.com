@@ -1,0 +1,71 @@
+{% import 'macros/google.html.twig' as google %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=1, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="generator" content="PieCrust {{ piecrust.version }}" />
+    <meta name="template-engine" content="Twig" />
+
+    <link rel="shortcut icon" href="{{site.root}}assets/img/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" href="{{site.root}}assets/img/apple-touch-icon-144-precomposed.png" sizes="144x144" />
+    <link rel="apple-touch-icon-precomposed" href="{{site.root}}assets/img/apple-touch-icon-114-precomposed.png" sizes="114x114" />
+    <link rel="apple-touch-icon-precomposed" href="{{site.root}}assets/img/apple-touch-icon-72-precomposed.png" sizes="72x72" />
+    <link rel="apple-touch-icon-precomposed" href="{{site.root}}assets/img/apple-touch-icon-57-precomposed.png" />
+
+    <title>{{ site.title }}{% if page.title is not empty %} &mdash; {{ page.title }}{% endif %}</title>
+
+    {% block css %}
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/style.css"  />
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/font-icomoon.css" />
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/font-awesome.css" />
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/js/highlight.js/tomorrow.css" />
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/js/jquery.fancybox/jquery.fancybox.css" />
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/dejavu.css" />
+        <!--[if IE 7]>
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/font-awesome-ie7.css" />
+        <![endif]-->
+        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/custom.css" />
+
+        {{ google.webfonts('Lobster') }}
+    {% endblock %}
+
+    {% block javascriptTop %}
+        <script src="{{site.root}}assets/js/jquery.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="{{site.root}}assets/js/html5.js"></script>
+        <![endif]-->
+    {% endblock %}
+</head>
+
+<body>
+
+<!--top menu-->
+<section id="top-menu">
+    <div class="container">
+        <div class="row">
+            <div class="span6 hidden-phone">
+                <p class="feed">Subscribe to be notified for updates: <a href="#">RSS Feed</a></p>
+            </div>
+            <div class="span6">
+                <ul class="top-social">
+                    <li><a href="https://twitter.com/juantreminio" rel="tooltip" data-placement="bottom" data-original-title="Twitter"><i class="icon-twitter"></i></a></li>
+                    <li><a href="https://github.com/jtreminio" rel="tooltip" data-placement="bottom" data-original-title="GitHub"><i class="icon-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--header-->
+<header id="header">
+    <div class="container">
+        {% include('.mainMenu.html.twig') %}
+    </div>
+</header>

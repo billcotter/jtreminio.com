@@ -1,0 +1,19 @@
+site:
+    title: Juan Treminio - Dallas PHP/MySQL Web Developer
+    description: Dallas PHP/MySQL Web Developer
+    author: Juan Treminio
+    pretty_urls: true
+    enable_debug_info: true
+    post_url: %year%/%month%/%slug%
+    category_url: category/%category%
+    
+smartypants:
+    enable: no
+    use_smartypants_typographer: true
+
+markdown:
+    use_markdown_extra: true
+
+baker:
+    skip_patterns:
+        - /^index.php/

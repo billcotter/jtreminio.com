@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="span3 logo">
+        <a class="logo-img" href="{{site.root}}" title="Juan Treminio"><img src="{{site.root}}assets/img/logo.png" alt="Juan Treminio"></a>
+    </div>
+    <div class="span9">
+        <nav id="menu" class="clearfix pull-right">
+            <ul>
+                <li><a href="{{site.root}}" {% if page.active == 'blog' or page.active is null %}class="current"{% endif %}><span class="name">Blog</span></a></li>
+                <li><a href="{{site.root}}portfolio" {% if page.active == 'portfolio' %}class="current"{% endif %}><span class="name">Portfolio</span></a></li>
+                <li><a href="{{site.root}}about" {% if page.active == 'about' %}class="current"{% endif %}><span class="name">About</span></a></li>
+                <li><a href="{{site.root}}contact" {% if page.active == 'contact' %}class="current"{% endif %}><span class="name">Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

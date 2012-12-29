@@ -1,0 +1,159 @@
+---
+title: Portfolio
+layout: page.html.twig
+shortDescription: Body of Work
+active: portfolio
+format: none
+---
+
+{% set assets = site.root ~ 'assets/img/portfolio' %}
+
+{% set items = {} %}
+
+{% set items =
+    {
+        'practicegenius' :
+            {
+                'name' : 'PracticeGenius.com',
+                'img'  : assets ~ '/practicegenius.com',
+                'tags' : ['kohana', 'medical'],
+                'desc' : 'Part of a team working on a custom Kohana application that caters to orthodontists and their patients.',
+            },
+        'beckett' :
+            {
+                'name' : 'Beckett.com',
+                'img'  : assets ~ '/beckett.com',
+                'tags' : ['ecommerce', 'codeigniter'],
+                'desc' : 'Helped develop a complete rewrite of an existing ASP.NET ecommerce application in CodeIgniter. PayPal integration, custom item handling and refunds were my main focus.',
+            },
+        'rehabrally' :
+            {
+                'name' : 'RehabRally.com',
+                'img'  : assets ~ '/rehabrally.com',
+                'tags' : ['ecommerce', 'codeigniter', 'medical'],
+                'desc' : 'This site was created in a month to be the face of an annual therapist-targetted live conference event that will be held in different locations. The application was built exclusively by me and handles student payments, class registrations, scheduling, integration with an existing database, exams and awarding certificates of completion. Written on top of CodeIgniter, the rest of the code is custom. HTML/CSS from scratch.',
+            },
+        'homeceuconnection' :
+            {
+                'name' : 'HomeCEUConnection.com',
+                'img'  : assets ~ '/homeceuconnection.com',
+                'tags' : ['ecommerce', 'medical'],
+                'desc' : 'This site targets therapists across the country (physical therapists, massage therapists, etc). It provides continuing education credits via online courses, exams and issues certificates of completion. The entire application is custom-built and has a major ecommerce facet that handles several hundred orders a day. Sister site to RehabRally.com. HTML/CSS from scratch.',
+            },
+        'jobhuntersbible' :
+            {
+                'name' : 'JobHuntersBible.com',
+                'img'  : assets ~ '/jobhuntersbible.com',
+                'tags' : ['blog', 'kohana'],
+                'desc' : 'A custom-made blog platform for renowned writer Dick Bolles. Built on top of Kohana, it has a powerful engine but is extremely easy to use. HTML/CSS from scratch.',
+            },
+        'campbowiedistrict' :
+            {
+                'name' : 'CampBowieDistrict.com',
+                'img'  : assets ~ '/campbowiedistrict.com',
+                'tags' : ['blog', 'ecommerce', 'wordpress'],
+                'desc' : 'A site that targets the Camp Bowie District of Ft. Worth, Texas. Built on top of Wordpress, it has a custom ecommerce module written exclusively for this site. HTML/CSS from scratch.',
+            },
+        'bigracksbbq' :
+            {
+                'name' : 'BigRacksBBQ.com',
+                'img'  : assets ~ '/bigracksbbq.com',
+                'tags' : ['wordpress'],
+                'desc' : 'A local BBQ restaurant needed a new website after changing owners. Written on top of Wordpress, this site contains a custom calendar system. HTML/CSS from scratch.',
+            },
+        'dallaspitbbq' :
+            {
+                'name' : 'DallasPitBBQ.com',
+                'img'  : assets ~ '/dallaspitbbq.com',
+                'tags' : ['wordpress'],
+                'desc' : 'Site created for a local BBQ catering company. Built on top of Wordpress. HTML/CSS from scratch.',
+            },
+        'hoopspoolservice' :
+            {
+                'name' : 'HoopsPoolService.com',
+                'img'  : assets ~ '/hoopspoolservice.com',
+                'tags' : ['kohana'],
+                'desc' : 'This website was converted to Kohana from an overkill Joomla installation. All HTML/CSS was re-written from the ground up to be pixel-perfect with the original design.',
+            },
+        'crystalfrasier' :
+            {
+                'name' : 'CrystalFrasier.com',
+                'img'  : assets ~ '/crystalfrasier.com',
+                'tags' : ['kohana', 'blog'],
+                'desc' : 'A local wedding event planner needed a new online identity for her company. Written on top of Kohana, created with ease of use in mind, this application allows her to quickly update her site without the need of a tech. HTML/CSS from scratch.',
+            },
+        'greenpapayadallas' :
+            {
+                'name' : 'GreenPapayaDallas.com',
+                'img'  : assets ~ '/greenpapayadallas.com',
+                'tags' : ['general'],
+                'desc' : 'Website for a local Vietnamese bistro. HTML/CSS from scratch.',
+            },
+        'wildroosterbar' :
+            {
+                'name' : 'WildRoosterBar.com',
+                'img'  : assets ~ '/wildroosterbar.com',
+                'tags' : ['general'],
+                'desc' : 'A local Ft. Worth restaurant needed a new website to announce upcoming events, drink specials and guest singers! Written on top of Wordpress, this website contains a custom calendar plugin to announce scheduled special events. HTML/CSS from scratch.',
+            },
+        'apexafterschool' :
+            {
+                'name' : 'ApexAfterSchool.com',
+                'img'  : assets ~ '/apexafterschool.com',
+                'tags' : ['wordpress'],
+                'desc' : 'When a local after-school program needed a new website to promote their business online, they turned to me to create a playful identity. Written on top of Wordpress. HTML/CSS from scratch.',
+            },
+        'memphisroar' :
+            {
+                'name' : 'MemphisRoar.com',
+                'img'  : assets ~ '/memphisroar.com',
+                'tags' : ['wordpress'],
+                'desc' : 'The Memphis College Tigers needed a custom, hands-free way of showcasing videos of up and coming sports stars, they turned to me to create their solution. The custom-made application creates screenshots and converts a provided video before displaying it on a special tube page. Written in Wordpress.',
+            },
+        'theshiver' :
+            {
+                'name' : 'TheShiver.com',
+                'img'  : assets ~ '/theshiver.com',
+                'tags' : ['wordpress'],
+                'desc' : 'The Univeristy of Kansas Jayhawks needed a custom, hands-free way of showcasing videos of up and coming sports stars, they turned to me to create their solution. The custom-made application creates screenshots and converts a provided video before displaying it on a special tube page. Written in Wordpress.',
+            },
+        'somniumbeds' :
+            {
+                'name' : 'SomniumBeds.com',
+                'img'  : assets ~ '/somniumbeds.com',
+                'tags' : ['general'],
+                'desc' : 'Customer was having issues with form data that could not validate, or wasn\'t in expected format for database insertion.',
+            },
+    }
+%}
+    <!--filter-->
+    <ul id="filtrable">
+        <li class="current all"><a href="#all">All</a></li>
+        <li class="codeigniter"><a href="#codeigniter">CodeIgniter</a></li>
+        <li class="ecommerce"><a href="#ecommerce">eCommerce</a></li>
+        <li class="general"><a href="#general">General</a></li>
+        <li class="kohana"><a href="#kohana">Kohana</a></li>
+        <li class="medical"><a href="#medical">Medical</a></li>
+        <li class="wordpress"><a href="#wordpress">Wordpress</a></li>
+    </ul>
+
+    <div class="clear"></div>
+
+    <section class="row portfolio filtrable clearfix">
+        {% for key, item in items %}
+
+            <article data-id="id-{{ key }}" data-type="{% for tag in item.tags %}{{ tag }} {% endfor %}" class="span3">
+                <div class="inner-image">
+                    <a href="{{ item.img }}_large.png" class="fancybox" title="{{ item.desc }}">
+                        <img src="{{ item.img }}_small.png" alt="photo"/>
+                        <span class="frame-overlay"></span>
+                    </a>
+                </div>
+                <div class="sliding">
+                    <div class="inner-text">
+                    <h4 class="title"><a href="#">{{ item.name }}</a></h4>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    </section>

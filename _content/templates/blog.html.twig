@@ -1,0 +1,24 @@
+{% extends '.template.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <section id="page-sidebar" class="pull-left span8">
+            {{ content|raw }}
+
+            <div id="navigation">
+                {% if pagination.prev_page %}
+                    &laquo;&nbsp;<a href="{{ pcurl(pagination.prev_page) }}" id="navigation-next">Newer Entries</a>
+                {% endif %}
+                {% if pagination.next_page %}
+                    <a href="{{ pcurl(pagination.next_page) }}" id="navigation-next">Older Entries</a>&nbsp;&raquo;
+                {% endif %}
+            </div>
+        </section>
+
+        {% block sidebar %}
+            {% include 'sidebar.html.twig' %}
+        {% endblock %}
+    </div>
+
+{% endblock %}

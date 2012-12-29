@@ -1,0 +1,39 @@
+<!--footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <p class="heading">Tags</p>
+                <ul class="footer-navigate">
+                    {% for tag in blog.tags %}
+                        <li><a href="{{ pcurl('tag/' ~ tag.name) }}"><i class="icon-tag icon-white"></i>{{ tag.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="span4">
+                <p class="heading">About</p>
+                <p>I am a web developer with a heavy focus on PHP. I am currently teaching myself OO-JavaScript.</p>
+                <p>I love writing tests (PHPUnit/Behat) and feel that a company that does not place a heavy emphasis on
+                    testing, be it TDD or BDD, is missing out on happier developers and better code!</p>
+                <address>
+                    <p><i class="icon-envelope"></i> <a href="mailto:jtreminio@gmail.com">jtreminio@gmail.com</a></p>
+                </address>
+            </div>
+            <div class="span4">
+                <p class="heading">Links</p>
+                <ul class="footer-navigate">
+                    <li><a href="{{site.root}}">Blog</a></li>
+                    <li><a href="{{site.root}}portfolio.html">Portfolio</a></li>
+                    <li><a href="{{site.root}}about.html">About</a></li>
+                    <li><a href="{{site.root}}contact.html">Contact</a></li>
+                </ul>
+                <p class="heading">More Juan</p>
+                <ul class="footer-navigate">
+                    <li><a href="https://twitter.com/juantreminio">Twitter</a></li>
+                    <li><a href="https://github.com/jtreminio">GitHub</a></li>
+                    <li><a href="{{site.root}}assets/pdf/juan.treminio.resume.pdf">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
