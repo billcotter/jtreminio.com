@@ -6,14 +6,19 @@ site:
     enable_debug_info: true
     post_url: %year%/%month%/%slug%
     category_url: category/%category%
-    
+    cache: false
+
+baker:
+    skip_patterns:
+        - index.php
+        - .htaccess
+        - web.config
+        - _plugins
+        - README.md
+
 smartypants:
     enable: no
     use_smartypants_typographer: true
 
 markdown:
     use_markdown_extra: true
-
-baker:
-    skip_patterns:
-        - /^index.php/
