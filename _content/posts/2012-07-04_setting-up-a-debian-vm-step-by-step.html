@@ -46,8 +46,9 @@ which works across all major operating systems.
 [Download the appropriate package from VirtualBox’s website](https://www.virtualbox.org/wiki/Downloads) and install it
 on your computer. All the default settings will do fine.
 
-The VM OS we’ll be installing is Debian.
-[Download Debian ISO to your computer](http://ftp.cae.tntech.edu/debian-cd/debian-6.0.5-amd64-i386-netinst.iso).
+The VM OS we’ll be installing is Debian. Go to this Debian mirror and download the latest netinst ISO. It should match
+`debian-#.#.#-amd64-i386-netinst.iso`.
+[Download Debian ISO to your computer](http://ftp.cae.tntech.edu/debian-cd/).
 
 [message error]The VM we will end up building and running is *not* secure and should not be used in a production
   environment. You should only set this up as a virtual machine on your local desktop![/message]
@@ -280,7 +281,7 @@ First thing’s first, we’re going to install the basic necessities, like `mak
 Apache server, Mercurial, Git and Subversion:
 
     [code-bash]
-    $ sudo apt-get install sudo apt-get install gcc make wget cron curl libxml2 libxml2-dev libzip-dev libbz2-dev curl libcurl4-openssl-dev libcurl3 libcurl3-gnutls libjpeg62 libjpeg62-dev libpng12-0 libpng12-dev libmcrypt-dev libmcrypt4 libxslt1-dev libxml2-dev apache2 apache2-mpm-prefork apache2-prefork-dev apache2-utils apache2.2-common git mercurial subversion libcupsys2 samba samba-common
+    $ sudo apt-get install gcc make wget cron curl libxml2 libxml2-dev libzip-dev libbz2-dev curl libcurl4-openssl-dev libcurl3 libcurl3-gnutls libjpeg62 libjpeg62-dev libpng12-0 libpng12-dev libmcrypt-dev libmcrypt4 libxslt1-dev libxml2-dev apache2 apache2-mpm-prefork apache2-prefork-dev apache2-utils apache2.2-common git mercurial subversion libcupsys2 samba samba-common
 
 Edit the new Apache2 config file, `$ sudo nano /etc/apache2/httpd.conf` and add
 
@@ -322,7 +323,7 @@ We need to update the IP address that MySQL will listen to for connections by ed
 Do a search for `bind-address` (`CTRL + W`) and change the setting to:
 
     [code-bash]
-    bind-address            = 127.0.0.1
+    ~~bind-address            = 127.0.0.1~~
     bind-address            = 192.168.56.101
 
 Now let’s grant the root MySQL user all permissions:

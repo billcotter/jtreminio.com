@@ -131,9 +131,9 @@ a:hover {color: #F7941D; text-decoration: none;}
 @media (max-width: 979px) {
     #menu > ul a {padding: 25px;}
 }
-#menu > ul a.current {background-color: #E81123;}
+#menu > ul a.current {background-color: #5195CE;}
 #menu > ul li:hover,
-#menu > ul a:hover {background-color: #F7941D;}
+#menu > ul a:hover {background-color: #005DB3;}
 #menu > ul a .name {}
 #menu > ul a .desc {}
 #menu > ul a:hover .name,
@@ -948,7 +948,7 @@ textarea.error {border: 1px solid #b94a48;}
 ul.icons {list-style: none; margin-left: 0;}
 ul.ul-list li {background: url('../img/ul-list.png') no-repeat 0 7px; padding-left: 15px;}
 ul.ul-list li a {display: block;}
-ul.ul-list-2 li {background: url('../img/ul-list-2.png') no-repeat 0 7px; padding-left: 15px;}
+ul.ul-list-2 li {background: url('../img/ul-list-2.png') no-repeat 0 7px; padding-left: 15px; text-indent: -.2em;}
 ul.ul-list-2 li a {display: block;}
 ul.ul-list-3 li {background: url('../img/ul-list-3.png') no-repeat 0 7px; padding-left: 15px;}
 ul.ul-list-3 li a {display: block;}

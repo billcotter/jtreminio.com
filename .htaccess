@@ -1,19 +1,15 @@
-# Uncomment this if you want to set 'pretty_urls' to 'true'.
 RewriteEngine on
 
-# If you're running from a sub-directory, uncomment the RewriteBase statement and
-# change it to the sub-directory name you're using.
-RewriteBase /piecrust/website
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
-# Don't rewrite requests to stuff that physically exists.
+RewriteBase /
+
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
 
-# Rewrite all the rest through the gateway.
 RewriteRule ^.*$ index.php [NC,L]
 
-# Various other configuration stuff.
 SetEnv TZ America/Chicago
-AddType text/css .less
