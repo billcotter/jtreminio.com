@@ -17,6 +17,7 @@
     <link rel="apple-touch-icon-precomposed" href="{{site.root}}assets/img/apple-touch-icon-114-precomposed.png" sizes="114x114" />
     <link rel="apple-touch-icon-precomposed" href="{{site.root}}assets/img/apple-touch-icon-72-precomposed.png" sizes="72x72" />
     <link rel="apple-touch-icon-precomposed" href="{{site.root}}assets/img/apple-touch-icon-57-precomposed.png" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.root}}feed.xml">
 
     <title>{{ site.title }}{% if page.title is not empty %} &mdash; {{ page.title }}{% endif %}</title>
 
@@ -29,7 +30,7 @@
         <link type="text/css" rel="stylesheet" href="{{site.root}}assets/js/jquery.fancybox/jquery.fancybox.css" />
         <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/dejavu.css" />
         <!--[if IE 7]>
-        <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/font-awesome-ie7.min.css" />
+            <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/font-awesome-ie7.min.css" />
         <![endif]-->
         <link type="text/css" rel="stylesheet" href="{{site.root}}assets/css/custom.css" />
 
@@ -45,24 +46,6 @@
 </head>
 
 <body>
-
-<!--top menu-->
-<section id="top-menu">
-    <div class="container">
-        <div class="row">
-            <div class="span6 hidden-phone">
-                <p class="feed">Subscribe to be notified for updates: <a href="#">RSS Feed</a></p>
-            </div>
-            <div class="span6">
-                <ul class="top-social">
-                    <li><a href="https://twitter.com/juantreminio" rel="tooltip" data-placement="bottom" data-original-title="Twitter"><i class="icon-twitter"></i></a></li>
-                    <li><a href="https://github.com/jtreminio" rel="tooltip" data-placement="bottom" data-original-title="GitHub"><i class="icon-github-alt"></i></a></li>
-                    <li><a href="{{site.root}}assets/pdf/juan.treminio.resume.pdf" rel="tooltip" data-placement="bottom" data-original-title="Resumé"><i class="icon-file-alt"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!--header-->
 <header id="header">

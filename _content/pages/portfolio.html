@@ -12,6 +12,27 @@ format: none
 
 {% set items =
     {
+        'yumilicious' :
+            {
+                'name' : 'yumilicious.co',
+                'img'  : assets ~ '/yumilicious.co',
+                'tags' : ['silex', 'ecommerce', 'unit-testing'],
+                'desc' : 'Local yogurt company wanted a new website. Built by me from the ground up, including the front-end and an extensive custom backend tailored to fit their specific requirements.',
+            },
+        'etouches' :
+            {
+                'name' : 'etouches.com',
+                'img'  : assets ~ '/etouches.com',
+                'tags' : ['yii', 'ecommerce', 'unit-testing'],
+                'desc' : 'Senior developer with the task of introducing the team to unit tests, proper MVC architecture and continuous integration with Jenkins.',
+            },
+        'kaplan' :
+            {
+                'name' : 'KaplanProfessional.com',
+                'img'  : assets ~ '/kaplanprofessional.com',
+                'tags' : ['kohana', 'ecommerce', 'unit-testing', 'lms'],
+                'desc' : 'Extremely test-driven environment working on an enterprise-level learning management system for continuing education students.',
+            },
         'practicegenius' :
             {
                 'name' : 'PracticeGenius.com',
@@ -129,6 +150,9 @@ format: none
     <!--filter-->
     <ul id="filtrable">
         <li class="current all"><a href="#all">All</a></li>
+        <li class="unit-testing"><a href="#unit-testing">Unit Testing</a></li>
+        <li class="lms"><a href="#lms">Learning Management System</a></li>
+        <li class="yii"><a href="#yii">Yii</a></li>
         <li class="codeigniter"><a href="#codeigniter">CodeIgniter</a></li>
         <li class="ecommerce"><a href="#ecommerce">eCommerce</a></li>
         <li class="general"><a href="#general">General</a></li>

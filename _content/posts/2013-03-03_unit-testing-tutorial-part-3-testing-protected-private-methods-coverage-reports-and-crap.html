@@ -11,7 +11,9 @@ This is Part III of a multi-part series. Below are the links to other parts of t
 
 * [Unit Testing Tutorial Part I: Introduction to PHPUnit]({{ pcurl('2013/03/unit-testing-tutorial-introduction-to-phpunit') }})
 * [Unit Testing Tutorial Part II: Assertions, Writing a Useful Test and @dataProvider]({{ pcurl('2013/03/unit-testing-tutorial-part-2-assertions-writing-a-useful-test-and-dataprovider') }})
-* Unit Testing Tutorial Part III: Testing Protected/Private methods, Coverage Reports and CRAP
+* Unit Testing Tutorial Part III: Testing Protected/Private Methods, Coverage Reports and CRAP
+* [Unit Testing Tutorial Part IV: Mock Objects, Stub Methods and Dependency Injection]({{ pcurl('2013/03/unit-testing-tutorial-part-4-mock-objects-stub-methods-dependency-injection') }})
+* [Unit Testing Tutorial Part V: Mock Methods and Overriding Constructors]({{ pcurl('2013/03/unit-testing-tutorial-part-5-mock-methods-and-overriding-constructors') }})
 [/message]
 
 A common question I keep hearing repeated is, "How much do I test?".
@@ -313,7 +315,7 @@ directly without having to go through public methods.
 To use, you simply do
 
     [code-php]
-    `$this->invokeMethod($user, 'cryptPassword', 'passwordToCrypt');`
+    $this->invokeMethod($user, 'cryptPassword', array('passwordToCrypt'));
 
 This would be the equivalent of simply typing
 
@@ -356,7 +358,7 @@ destination to have the files generated. I usually use a folder `coverage`:
 </p>
 
 If you look at your filesystem now, you will see that a `coverage` folder has been
-created and filled with HTML files. Open the `index.php` file and you will see:
+created and filled with HTML files. Open the `index.html` file and you will see:
 
 <p class="aligncenter">
     <a href="{{ assets }}/02-coverage-report-dashboard.png" class="fancybox">

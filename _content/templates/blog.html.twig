@@ -1,24 +1,34 @@
 {% extends '.template.html.twig' %}
 
-{% block content %}
+{% block breadcrumbs %}
+    {% embed 'widgets/breadcrumb.html.twig' %}
+        {% block title %}
+            <a href="{{ page.url }}">{{ page.title }}</a>
+            <small> / Learn you some knowledge for great justice!</small>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
 
+{% block content %}
     <div class="row">
-        <section id="page-sidebar" class="pull-left span8">
+        <section id="page-sidebar" class="pull-left span9">
+            <section>
+                <div class="tags">
+                    {% for tag in blog.tags %}
+                        <a href="{{ pcurl('tag/' ~ tag.name) }}">{{ tag.name }}</a>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <hr />
+
             {{ content|raw }}
 
-            <div id="navigation">
-                {% if pagination.prev_page %}
-                    &laquo;&nbsp;<a href="{{ pcurl(pagination.prev_page) }}" id="navigation-next">Newer Entries</a>
-                {% endif %}
-                {% if pagination.next_page %}
-                    <a href="{{ pcurl(pagination.next_page) }}" id="navigation-next">Older Entries</a>&nbsp;&raquo;
-                {% endif %}
-            </div>
+            {% include 'widgets/pagination.html.twig' %}
         </section>
 
         {% block sidebar %}
             {% include 'sidebar.html.twig' %}
         {% endblock %}
     </div>
-
 {% endblock %}

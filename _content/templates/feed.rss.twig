@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    {% for post in blog.posts %}
+
+        {% if loop.first %}
+            <title><![CDATA[{{ site.title }}]]></title>
+            <link href="{{ site.root }}feed.rss" rel="self"/>
+            <link href="{{ site.root }}"/>
+            <updated>{{ post.date|date('Y-m-d\TH:i:s\Z') }}</updated>
+            <id>{{ site.root }}</id>
+            <author>
+                <name><![CDATA[Juan Treminio]]></name>
+            </author>
+        {% endif %}
+
+        <entry>
+            <title type="html"><![CDATA[{{ post.title }}]]></title>
+            <link href="{{ post.url }}"/>
+            <updated>{{ post.date|date('Y-m-d\TH:i:s\Z') }}</updated>
+            <id>{{ post.url }}</id>
+            <content type="html"><![CDATA[{{ post.content|raw }}]]></content>
+        </entry>
+    {% endfor %}
+</feed>

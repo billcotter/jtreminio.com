@@ -1,4 +1,5 @@
 body {
+    background-color: #FDFDFA;
     font-size: 16px;
     line-height: 25px;
 }
@@ -19,6 +20,14 @@ pre code {
     font-size: 12px;
 }
 
+hr.thin {
+    border-top-width: 1px;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
 .post-meta {
     margin-bottom: 0;
 }
@@ -29,4 +38,8 @@ pre code {
 
 article.blog-post {
     margin-bottom: 30px;
+}
+
+ul.contact a {
+    color: #fff;
 }
